@@ -1,0 +1,17 @@
+﻿@model List<CheeseMVC.Models.CheeseCategory>
+
+
+@* Your view should display an unordered list (that is, a <ul>) of category names.
+     The list will look a bit plain for now, but we will make it more interesting later on.
+    
+    catContent in CategoryController
+*@ 
+
+<ul>
+    @foreach (var cheesecat in Model)
+    {
+        <li><a asp-controller="Cheese" asp-action="Category" asp-route-categoryID="@cheesecat.ID">@cheesecat.Name</a></li> @* Not Working?*@
+    }
+</ul>
+
+<p><a asp-controller="Category" asp-action="Add">Add Category</a></p>
